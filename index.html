@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ro">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>COSMIN MOTION</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+  <header><div class="brand"><span class="logo">cm<span>↗</span></span><div>COSMIN <strong>MOTION</strong><small>YOUR EVERYDAY EDITING TOOLKIT</small></div></div><span class="version">1.2</span></header>
+  <main>
+    <div class="section-heading"><span>MOTION LIBRARY</span><span id="count"></span></div>
+    <nav aria-label="Categorii" id="categories"></nav>
+    <input id="search" type="search" placeholder="Caută un preset…" aria-label="Caută preseturi">
+    <div id="presets" class="grid" role="region" aria-label="Bibliotecă preseturi" tabindex="0"></div>
+    <section id="layout-tools" hidden>
+      <div class="selected"><span class="eyebrow">TEXT LAYOUT</span><h1>Arrange Sentence</h1><p>Selectează cuvintele separate și le așază pe un rând, ca o propoziție normală.</p></div>
+      <label class="duration">Spacing <span><input id="layout-spacing" type="number" min="0" max="500" value="34" step="1" aria-label="Spacing in pixels"> px</span></label>
+      <label class="duration">Max Width <span><input id="layout-max-width" type="number" min="20" max="100" value="82" step="1" aria-label="Maximum line width percent"> %</span></label>
+      <div class="toggles"><label><input id="layout-center-x" type="checkbox" checked> Center X</label><label><input id="layout-keep-order" type="checkbox" checked> Keep visual order</label></div>
+      <button id="arrange-sentence" class="apply">Arrange as sentence <span>↗</span></button>
+      <button id="align-text-stack" class="apply">Align selected texts <span>↗</span></button>
+      <p class="hint">Funcționează pe text layers selectate · Undo disponibil</p>
+    </section>
+    <section id="templates" hidden>
+      <label>Template<select id="template-kind"><option value="instagram">Instagram Profile</option><option value="tiktok">TikTok Follow</option><option value="youtube">YouTube Like & Subscribe</option></select></label>
+      <div id="social-preview" aria-label="Preview schematic"></div>
+      <div class="template-fields">
+        <label>Nume<input id="social-name" value="Cosmin Motion" maxlength="40"></label>
+        <label>Username<input id="social-handle" value="cosmin.motion" maxlength="40"></label>
+        <label>Bio<input id="social-bio" value="Video creator · Motion designer" maxlength="80"></label>
+        <label>Followers / Subscribers<input id="social-followers" value="12.5K" maxlength="12"></label>
+        <label>Following<input id="social-following" value="245" maxlength="12"></label>
+        <label>Posts<input id="social-posts" value="128" maxlength="12"></label>
+        <label>Likes<input id="social-likes" value="128.4K" maxlength="12"></label>
+        <label>Durată (secunde)<input id="social-seconds" type="number" min="2" max="30" value="5" step="0.5"></label>
+      </div>
+      <button id="choose-photo" type="button">Alege fotografie PNG / JPG</button><button id="clear-photo" type="button">Fără fotografie</button>
+      <p id="photo-name">Avatar implicit</p>
+      <button id="insert-template" class="apply">Insert template ↗</button>
+      <p class="hint">Precomp editabil la playhead · nu necesită layer selectat</p>
+      <div class="selected"><span class="eyebrow">QUICK ELEMENTS</span><h1>Social & Text</h1><p>Elemente mici editabile pentru TikTok UI, textbox, underline și highlight.</p></div>
+      <label>Element<select id="element-kind"><option value="tiktok-like">TikTok Like Button</option><option value="tiktok-follow">TikTok Follow Button</option><option value="comment-box">Comment Text Box</option><option value="highlight">Text Highlight</option><option value="underline">Animated Underline</option></select></label>
+      <div id="element-presets" class="grid quick-grid" role="region" aria-label="Quick element preview"></div>
+      <label>Text<input id="element-text" value="Follow for more" maxlength="80"></label>
+      <button id="insert-element" class="apply">Insert element <span>↗</span></button>
+    </section>
+    <section class="settings" id="animation-settings">
+      <div class="selected"><span class="eyebrow">SELECTED PRESET</span><h1 id="preset-title">Swipe Left</h1><p id="description"></p></div>
+      <label class="duration">Duration <span><input id="duration" type="number" min="1" max="300" value="36" step="1" aria-label="Duration in frames"> frames</span></label>
+      <label class="intensity" for="intensity">Intensity <output id="intensity-value">100%</output></label>
+      <input id="intensity" type="range" min="10" max="200" value="100" step="5">
+      <div class="toggles"><label><input id="motion-blur" type="checkbox" checked> Motion Blur</label><label><input id="easy-ease" type="checkbox" checked> Easy Ease</label></div>
+    </section>
+    <button id="apply" class="apply">Apply animation <span>↗</span></button>
+    <p class="hint">Selectează layerele. Poziționează playhead-ul. Apply.</p>
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+  <footer><span class="dot"></span><span id="connection">Connecting to After Effects…</span><span class="footer-right">MADE FOR YOUR FLOW</span></footer>
+  <script src="js/CSInterface.js"></script><script src="js/panel.js"></script>
+</body></html>

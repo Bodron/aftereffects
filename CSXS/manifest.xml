@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="ro.cosmin.motion" ExtensionBundleVersion="1.2.0" ExtensionBundleName="COSMIN MOTION">
+  <ExtensionList><Extension Id="ro.cosmin.motion.panel" Version="1.2.0"/></ExtensionList>
+  <ExecutionEnvironment>
+    <HostList><Host Name="AEFT" Version="[17.0,99.9]"/></HostList>
+    <LocaleList><Locale Code="All"/></LocaleList>
+    <RequiredRuntimeList><RequiredRuntime Name="CSXS" Version="11.0"/></RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList><Extension Id="ro.cosmin.motion.panel"><DispatchInfo>
+    <Resources><MainPath>./index.html</MainPath><ScriptPath>./jsx/after-effects.jsx</ScriptPath></Resources>
+    <Lifecycle><AutoVisible>true</AutoVisible></Lifecycle>
+    <UI><Type>Panel</Type><Menu>COSMIN MOTION</Menu><Geometry><Size><Height>720</Height><Width>380</Width></Size><MinSize><Height>480</Height><Width>300</Width></MinSize></Geometry></UI>
+  </DispatchInfo></Extension></DispatchInfoList>
+</ExtensionManifest>
